@@ -60,13 +60,21 @@ function imprimirLaTablaDel(numero, hasta){
 console.log(imprimirLaTablaDel(28,30));
 /*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
- [1,2,3,4,5,6,7,8,9,10]
-
- 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
-
+[1,2,3,4,5,6,7,8,9,10]
+1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+*/
+function calcularLaSumaDeNumeros(arrayDeNumeros){
+    let total = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        total += arrayDeNumeros[i];
+    }
+    return total;
+}
+console.log(calcularLaSumaDeNumeros([1,2,3,4,5,6,7,8,9,10]));
+/*
 Desafío de programación #6: Calcula 10! (10 factorial)
 
- 10 * 9 * 8 * ... * 1
+10 * 9 * 8 * ... * 1
 
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
