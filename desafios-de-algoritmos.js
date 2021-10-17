@@ -21,12 +21,16 @@ for(let i = 1; i <= 100; i+=2){
 }
 /*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
-
- 7x0 = 0
- 7x1 = 7
- ...
- 7x9 = 63
-
+7x0 = 0
+7x1 = 7
+...
+7x9 = 63
+*/
+for(let i = 1; i <= 10; i++){
+    let tablaDelSiete = "7 x " + i + " = " + 7 * i;
+    console.log(tablaDelSiete)
+}
+/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
  1x0 = 0
