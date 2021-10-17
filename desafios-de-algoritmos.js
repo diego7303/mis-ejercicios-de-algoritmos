@@ -104,7 +104,14 @@ console.log(fahrenheitACelsius(131));
 //Desafío de programación #10: Calcula la suma de todos los números en un array de números
 console.log((calcularLaSumaDeNumeros([44,23,7,5,81,67,3,18])));
 //Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
-
+function calcularElPromedio(arrayDeNumeros){
+    let total = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        total += arrayDeNumeros[i];
+    }
+    return total / arrayDeNumeros.length;
+}
+console.log(calcularElPromedio([1,2,3,4,5,6]));
 //Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
 
 //Desafío de programación #13: Find the maximum number in an array of numbers
