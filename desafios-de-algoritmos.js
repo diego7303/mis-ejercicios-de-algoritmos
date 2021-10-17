@@ -12,12 +12,13 @@ Resultado: 10 9 8 7 6 5 4 3 2 1
 for(let i = 10; i > 0; i--){
     console.log(i);
 }
-
 /*
 Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 1 3 5 ... 99
 */
-
+for(let i = 1; i <= 100; i+=2){
+    console.log(i)
+}
 /*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
