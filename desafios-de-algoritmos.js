@@ -77,15 +77,21 @@ Desafío de programación #6: Calcula 10! (10 factorial)
 */
 function calcularFactorial(numero){
     let total = 1;
-    for (let i = 1; i <= numero; i++){
+    for(let i = 1; i <= numero; i++){
         total *= i;
     }
     return total;
 }
 console.log(calcularFactorial(10));
-/*
-Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
+//Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+let suma = 0;
+for(let i = 11; i <= 30; i+=2){
+    suma += i;
+}
+console.log(suma);
+
+/*
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
 Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
