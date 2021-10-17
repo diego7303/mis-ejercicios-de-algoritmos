@@ -102,7 +102,7 @@ function fahrenheitACelsius(numeroFahrenheit){
 }
 console.log(fahrenheitACelsius(131));
 //Desafío de programación #10: Calcula la suma de todos los números en un array de números
-
+console.log((calcularLaSumaDeNumeros([44,23,7,5,81,67,3,18])));
 //Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 
 //Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
