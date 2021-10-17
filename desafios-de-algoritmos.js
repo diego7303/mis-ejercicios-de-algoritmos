@@ -32,17 +32,25 @@ for(let i = 1; i <= 10; i++){
 }
 /*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
-
- 1x0 = 0
- ...
- 1x9 = 9
- 2x0 = 0
- ...
- 2x9 = 18
- ...
- ...
- 9x9 = 81
-
+1x0 = 0
+...
+1x9 = 9
+2x0 = 0
+...
+2x9 = 18
+...
+...
+9x9 = 81
+*/
+for(let i = 1; i <= 10; i++){
+    console.log("")
+    console.log("tabla del " + i)
+    for(let j = 1; j <= 10; j++){
+        console.log(i + " x " + j + " = " + j * i)
+        
+    }
+}
+/*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
