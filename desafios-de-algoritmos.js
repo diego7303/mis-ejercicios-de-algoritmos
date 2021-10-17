@@ -145,14 +145,16 @@ Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci si
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 */
-function imprimirFibonacci(numero){
+function imprimirDigitosFibonacci(numero){
     let fibonacci = [0,1]; 
     for(let i = 0; i < numero -2; i++){ 
         fibonacci.push(fibonacci[i] + fibonacci[i +1]); 
     }
     return fibonacci;
 }
-console.log(imprimirFibonacci(10));
+console.log(imprimirDigitosFibonacci(10));
+
+// opcion 2 encuentra el numero N de fibonacci
 
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
