@@ -155,7 +155,14 @@ function imprimirDigitosFibonacci(numero){
 console.log(imprimirDigitosFibonacci(10));
 
 // opcion 2 encuentra el numero N de fibonacci
-
+function imprimirNumeroFibonacci(numero){
+    let fibonacci = [0,1]; 
+    for(let i = 0; i < numero -2; i++){ 
+        fibonacci.push(fibonacci[i] + fibonacci[i +1]); 
+    }
+    return fibonacci[fibonacci.length -1];
+}
+console.log(imprimirNumeroFibonacci(20));
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
 /*
