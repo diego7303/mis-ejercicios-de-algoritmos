@@ -7,13 +7,18 @@ usando  elementos de programación simples y clásicos.
 
 /*
 Desafío de programación #1: Imprimí los números del 1 al 10
+Resultado: 10 9 8 7 6 5 4 3 2 1
+*/
+for(let i = 10; i > 0; i--){
+    console.log(i);
+}
 
- Resultado: 10 9 8 7 6 5 4 3 2 1
+/*
+Desafìo de programación  #2: Imprimí los números impares del 1 al 100
+1 3 5 ... 99
+*/
 
- Desafìo de programación  #2: Imprimí los números impares del 1 al 100
-
- 1 3 5 ... 99
-
+/*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
