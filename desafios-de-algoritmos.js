@@ -91,26 +91,33 @@ for(let i = 11; i <= 30; i+=2){
 }
 console.log(suma);
 
+//Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+function celsiusAFahrenheit(numeroCelsius){
+    return numeroCelsius * 1.8 + 32;    
+}
+console.log(celsiusAFahrenheit(33));
+//Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+function fahrenheitACelsius(numeroFahrenheit){
+    return (numeroFahrenheit - 32) / 1.8;
+}
+console.log(fahrenheitACelsius(131));
+//Desafío de programación #10: Calcula la suma de todos los números en un array de números
+
+//Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+
+//Desafío de programación #13: Find the maximum number in an array of numbers
+
 /*
-Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
-
-Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
-
-Desafío de programación #10: Calcula la suma de todos los números en un array de números
-
-Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
-
-Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
-
-Desafío de programación #13: Find the maximum number in an array of numbers
-
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
-
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+*/
 
-Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+//Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
+/*
 Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
 Ejemplo:
