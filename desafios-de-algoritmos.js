@@ -127,8 +127,18 @@ function devolverNumerosPositivos(arrayDeNumeros){
     return numeroPositivo;
 }
 console.log(devolverNumerosPositivos([2,5,-6,8,-1,9,-45,0,2]));
-//Desafío de programación #13: Find the maximum number in an array of numbers
 
+//Desafío de programación #13: Find the maximum number in an array of numbers
+function devolverElMayorNumero(arrayDeNumeros){
+    let contador = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        if(arrayDeNumeros[i] > contador){
+            contador = arrayDeNumeros[i];
+        }
+    }
+    return contador;
+}
+console.log(devolverElMayorNumero([2, 5, -6, 8, -1, 9, -45, 0, 2]));
 /*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
