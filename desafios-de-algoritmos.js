@@ -50,6 +50,14 @@ for(let i = 1; i <= 10; i++){
         
     }
 }
+
+function imprimirLaTablaDel(numero, hasta){
+    for(let i = 1; i <= hasta; i++){
+        console.log(numero + " x " + i + " = " + numero * i);
+    }
+    return;
+}
+console.log(imprimirLaTablaDel(28,30));
 /*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
