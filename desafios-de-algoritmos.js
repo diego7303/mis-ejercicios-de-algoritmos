@@ -96,13 +96,16 @@ function celsiusAFahrenheit(numeroCelsius){
     return numeroCelsius * 1.8 + 32;    
 }
 console.log(celsiusAFahrenheit(33));
+
 //Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
 function fahrenheitACelsius(numeroFahrenheit){
     return (numeroFahrenheit - 32) / 1.8;
 }
 console.log(fahrenheitACelsius(131));
+
 //Desafío de programación #10: Calcula la suma de todos los números en un array de números
 console.log((calcularLaSumaDeNumeros([44,23,7,5,81,67,3,18])));
+
 //Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 function calcularElPromedio(arrayDeNumeros){
     let total = 0;
@@ -112,8 +115,18 @@ function calcularElPromedio(arrayDeNumeros){
     return total / arrayDeNumeros.length;
 }
 console.log(calcularElPromedio([1,2,3,4,5,6]));
-//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
 
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+function devolverNumerosPositivos(arrayDeNumeros){
+    let numeroPositivo = [];
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        if(arrayDeNumeros[i] > 0){
+            numeroPositivo.push(arrayDeNumeros[i]);
+        }
+    }
+    return numeroPositivo;
+}
+console.log(devolverNumerosPositivos([2,5,-6,8,-1,9,-45,0,2]));
 //Desafío de programación #13: Find the maximum number in an array of numbers
 
 /*
