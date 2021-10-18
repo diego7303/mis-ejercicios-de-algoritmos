@@ -280,12 +280,22 @@ console.log(invertirArrayIterando([1,2,3,4,5,6,7,8,9]));
 // utilizando el metodo .reverse()
 let arrayDeNumeros = [1,2,3,4,5,6,7];
 console.log(arrayDeNumeros.reverse());
+
 /*
 Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
-  "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
-  "bienvenido" debería quedar como "odinevneib"
-
+"dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
+"bienvenido" debería quedar como "odinevneib"
+*/
+function invertirCadenaDeCaracteresIterando(cadena){
+    let pushLetra = "";
+    for(let i = cadena.length - 1; i >= 0; i--){
+        pushLetra += cadena[i];
+    }
+    return pushLetra;
+}
+console.log(invertirCadenaDeCaracteresIterando("odinevneib"));
+/*
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
   [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
