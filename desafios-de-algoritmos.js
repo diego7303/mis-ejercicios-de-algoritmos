@@ -237,15 +237,26 @@ console.log(obtenerPrimosMayoresQue(50,36));
 /*
 Desafío de programación #20: Rotar un array hacia la izquierda una posición
 Ejemplo:
-  [9,1,2,3,4] debería quedar como [1,2,3,4,9]
-  [5] debería quedar como [5]
-  [4,3,2,1] debería quedar como [3,2,1,4]
+[9,1,2,3,4] debería quedar como [1,2,3,4,9]
+[5] debería quedar como [5]
+[4,3,2,1] debería quedar como [3,2,1,4]
+*/
+function rotarHaciaLaIzquierda(array){
+    let primeraPosicion = array.shift();
+    array.push(primeraPosicion);
+    return array;
+}
+console.log(rotarHaciaLaIzquierda([9, 1, 2, 3, 4, 5, 6, 7, 8]));
 
+
+/*
 Desafío de programación #21: Rotar un array a la derecha una posición
 Ejemplo:
-  [2,3,4,1] debería quedar como [1,2,3,4]
-  [2,3] debería quedar como [3,2]
+[2,3,4,1] debería quedar como [1,2,3,4]
+[2,3] debería quedar como [3,2]
+*/
 
+/*
 Desafío de programación #22: Invertir un array
 Ejemplo:
   [1,2,3,4] debería quedar como [4,3,2,1]
