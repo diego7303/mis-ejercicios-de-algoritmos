@@ -326,13 +326,45 @@ console.log(concatenarArray([1,2,3], ["a","b","c"]));
 /*
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Nota: Esto se llama "diferencia simétrica" entre conjuntos
-
-
-Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Ejemplo:
-  [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
-  [5,10,3] y [10,1] debería quedar como [5,3,1]
+[1,2,3] y [3,7,11] debería devolver [1,2,7,11]
+[5,10,3] y [10,1] debería quedar como [5,3,1]
+*/
+function diferenciaSimetricaIterando(arr1, arr2){
+    let resultado = [];
+    let diferente = false;
+    for(let i = 0; i < arr1.length; i++){
+        for(let j = 0; j < arr2.length; j++){
+            if(arr1[i] !== arr2[j]){
+                diferente = true;
+            } else {
+                diferente = false;
+                break;
+            }
+        }
+        if(diferente === true){
+            resultado.push(arr1[i]);
+        }
+    }   
 
+    for(let i = 0; i < arr2.length; i++){
+        for(let j = 0; j < arr1.length; j++){
+            if(arr2[i] !== arr1[j]){
+                diferente = true;
+            } else {
+                diferente = false;
+                break;
+            }
+        }
+        if(diferente === true){
+            resultado.push(arr2[i]);
+        }
+    }   
+
+    return resultado;
+}
+console.log(diferenciaSimetricaIterando([1,2,3],[3,2,11]));
+/*
 Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
 Ejemplo:
