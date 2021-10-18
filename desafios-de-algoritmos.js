@@ -402,9 +402,28 @@ console.log(restaEntreConjuntos([5,1,2,3,4], [3,4]));
 /*
 Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 Ejemplo:
-   [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
-
-
+[1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
+*/
+function eliminarNumerosDuplicados(arr){
+    let resultado = [];
+    let diferente = false;
+    for(let i = 0; i < arr.length; i++){
+       
+        if(arr[i] !== arr[i]){
+            diferente = true;
+        } else {
+            diferente = false;
+            break;
+        }
+        
+        if(diferente === true){
+            resultado.push(arr[i]);
+        }
+    }   
+    return resultado;
+}
+console.log(eliminarNumerosDuplicados([1,2,3,4,5,4,3,2,1,0]));
+/*
 ==== FALTAN TRADUCIR
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
 Desafío de programación #29: Print the distance between the first 100 prime numbers
