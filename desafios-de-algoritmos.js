@@ -163,7 +163,13 @@ function imprimirNumeroFibonacci(numero){
     return fibonacci[fibonacci.length -1];
 }
 console.log(imprimirNumeroFibonacci(20));
+
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+function fibonacciRecursivo(numero){
+    if(numero == 0) { return 0 }
+    if(numero == 1) { return 1 }
+    return fibonacciRecursivo(numero -1) + fibonacciRecursivo(numero -2);
+}
 
 /*
 Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
