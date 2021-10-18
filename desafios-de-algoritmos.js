@@ -191,12 +191,26 @@ console.log(esNumeroPrimo(9));
 /*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
-   123 = 1 + 2 + 3 = 6
-   2 = 2
-   1234 = 1 + 2 + 3 + 4 = 10
+123 = 1 + 2 + 3 = 6
+2 = 2
+1234 = 1 + 2 + 3 + 4 = 10
+*/
+function sumarTodosLosNumeros(numero){
+    let array = numero.toString();
+    let contador = [];
+    let total = 0;
+    
+    for(let i = 0; i < array.length; i++) {
+        contador.push(array[i]);
+        total += Number(array[i]);
+    }
+    return total;
+}
+console.log(sumarTodosLosNumeros(57483647));
 
-Desafío de programación #18: Imprimir los primeros 100 números primos
+//Desafío de programación #18: Imprimir los primeros 100 números primos
 
+/*
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
   Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
