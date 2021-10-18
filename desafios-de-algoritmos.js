@@ -295,6 +295,13 @@ function invertirCadenaDeCaracteresIterando(cadena){
     return pushLetra;
 }
 console.log(invertirCadenaDeCaracteresIterando("odinevneib"));
+
+// mejor opcion, utilizando metodos
+function invertirCadenaDeCaracteres(cadena){
+    return cadena.split("").reverse().join("");
+}
+console.log(invertirCadenaDeCaracteres("odinevneib"));
+
 /*
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
