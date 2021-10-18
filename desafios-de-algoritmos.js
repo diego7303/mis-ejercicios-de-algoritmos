@@ -364,6 +364,23 @@ function diferenciaSimetricaIterando(arr1, arr2){
     return resultado;
 }
 console.log(diferenciaSimetricaIterando([1,2,3],[3,2,11]));
+
+// segunda opcion con el metodo .indexOf()
+function diferenciaSimetrica(arr1, arr2){
+    let resultado = [];
+    for(let i = 0; i < arr1.length; i++){
+        if(arr2.indexOf(arr1[i]) === -1){
+            resultado.push(arr1[i]);
+        }
+    }
+    for(let j = 0; j < arr2.length; j++){
+        if(arr1.indexOf(arr2[j]) === -1){
+            resultado.push(arr2[j]);
+        }
+    }
+    return resultado;
+}
+console.log(diferenciaSimetrica([1,2,3],[3,7,11]));
 /*
 Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
