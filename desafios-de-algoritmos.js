@@ -423,6 +423,19 @@ function eliminarNumerosDuplicados(arr){
     return resultado;
 }
 console.log(eliminarNumerosDuplicados([1,2,3,4,5,4,3,2,1,0]));
+
+// mejor opcion, utilizando el metodo includes() devuelve true of false
+function descartarNumerosDuplicados(arr){
+    let resultado = [];
+    for(let i = 0; i < arr.length; i++){
+        if(!resultado.includes(arr[i])){
+            resultado.push(arr[i]);
+        }
+    }
+    return resultado;
+}
+console.log(descartarNumerosDuplicados([1,2,3,4,5,4,3,2,1,0]));
+
 /*
 ==== FALTAN TRADUCIR
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
