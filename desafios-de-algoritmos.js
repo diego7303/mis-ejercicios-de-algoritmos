@@ -305,9 +305,17 @@ console.log(invertirCadenaDeCaracteres("odinevneib"));
 /*
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
-  [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
-
-
+[1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+*/
+function concatenarArrayIterando(arr1, arr2){
+    let nuevoArray = arr1;
+    for(let i = 0; i < arr2.length; i++){
+        nuevoArray.push(arr2[i]);
+    }
+    return nuevoArray;
+}
+console.log(concatenarArrayIterando([1,2,3], ["a","b","c"]));
+/*
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Nota: Esto se llama "diferencia simétrica" entre conjuntos
 
