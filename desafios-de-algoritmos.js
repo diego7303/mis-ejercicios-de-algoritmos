@@ -276,6 +276,10 @@ function invertirArrayIterando(arr){
     return nuevoArray;
 }
 console.log(invertirArrayIterando([1,2,3,4,5,6,7,8,9]));
+
+// utilizando el metodo .reverse()
+let arrayDeNumeros = [1,2,3,4,5,6,7];
+console.log(arrayDeNumeros.reverse());
 /*
 Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
