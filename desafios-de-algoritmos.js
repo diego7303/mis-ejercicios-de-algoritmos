@@ -315,9 +315,18 @@ function concatenarArrayIterando(arr1, arr2){
     return nuevoArray;
 }
 console.log(concatenarArrayIterando([1,2,3], ["a","b","c"]));
+
+// segunda opcion con el metodo .concat()
+function concatenarArray(arr1, arr2){
+    let nuevoArray = arr1.concat(arr2);
+    return nuevoArray;
+}
+console.log(concatenarArray([1,2,3], ["a","b","c"]));
+
 /*
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Nota: Esto se llama "diferencia simétrica" entre conjuntos
+
 
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Ejemplo:
