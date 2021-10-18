@@ -171,19 +171,24 @@ function fibonacciRecursivo(numero){
     return fibonacciRecursivo(numero -1) + fibonacciRecursivo(numero -2);
 }
 
+//Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+function esNumeroPrimo(numero){ 
+    let contador = 0; 
+    for(let i = 1; i <= numero; i++){
+        if(numero % i === 0){ 
+            contador++ 
+        }    
+    }
+    if(contador === 2 ){
+        numero = true
+    }else{
+        numero = false;
+    }
+    return numero;
+}
+console.log(esNumeroPrimo(9));
+
 /*
-Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
-Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
-Ejemplo:
-   1 NO es primo porque tiene 2 divisores enteros (1, -1)
-   2 es primo porque sólo puede dividirse por (1,-1,2,-2)
-   3 es primo porque sólo puede dividirse por (1,-1,3,-3)
-   4 NO es primo porque se puede dividir por (1,-1,2,-2,4,-4)
-   5 es primo porque sólo puede dividirse por (1,-1,5,-5)
-   6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
-   ... y así
-
-
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
