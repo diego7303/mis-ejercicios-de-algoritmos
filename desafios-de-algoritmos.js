@@ -209,7 +209,16 @@ function sumarTodosLosNumeros(numero){
 console.log(sumarTodosLosNumeros(57483647));
 
 //Desafío de programación #18: Imprimir los primeros 100 números primos
-
+function imprimirNumerosPrimos(numero){ //<-indicar cantidad de n-primos deseados
+    let numerosPrimos = [];
+    for (let i = numerosPrimos; numerosPrimos.length < numero; i++) {
+        if(esNumeroPrimo(i)){ //<-llamo a la funcion para preguntar si es primo
+            numerosPrimos.push(i);
+        }
+    }
+    return numerosPrimos;
+}
+console.log(imprimirNumerosPrimos(100));
 /*
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
