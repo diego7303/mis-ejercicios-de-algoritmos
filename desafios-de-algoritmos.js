@@ -248,14 +248,18 @@ function rotarHaciaLaIzquierda(array){
 }
 console.log(rotarHaciaLaIzquierda([9, 1, 2, 3, 4, 5, 6, 7, 8]));
 
-
 /*
 Desafío de programación #21: Rotar un array a la derecha una posición
 Ejemplo:
 [2,3,4,1] debería quedar como [1,2,3,4]
 [2,3] debería quedar como [3,2]
 */
-
+function rotarHaciaLaDerecha(array){
+    let ultimaPosicion = array.pop();
+    array.unshift(ultimaPosicion);
+    return array;
+}
+console.log(rotarHaciaLaDerecha([2, 3, 4, 5, 6, 7, 8, 9, 1]));
 /*
 Desafío de programación #22: Invertir un array
 Ejemplo:
