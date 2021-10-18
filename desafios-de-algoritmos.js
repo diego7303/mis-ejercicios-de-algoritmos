@@ -381,12 +381,25 @@ function diferenciaSimetrica(arr1, arr2){
     return resultado;
 }
 console.log(diferenciaSimetrica([1,2,3],[3,7,11]));
+
 /*
 Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
 Ejemplo:
-  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+[5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+*/
+function restaEntreConjuntos(arr1, arr2){
+    let resultado = [];
+    for(let i = 0; i < arr1.length; i++){
+        if(arr2.indexOf(arr1[i]) === -1){
+            resultado.push(arr1[i]);
+        }
+    }
+    return resultado;
+}
+console.log(restaEntreConjuntos([5,1,2,3,4], [3,4]));
 
+/*
 Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 Ejemplo:
    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
