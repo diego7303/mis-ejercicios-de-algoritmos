@@ -260,13 +260,23 @@ function rotarHaciaLaDerecha(array){
     return array;
 }
 console.log(rotarHaciaLaDerecha([2, 3, 4, 5, 6, 7, 8, 9, 1]));
+
 /*
 Desafío de programación #22: Invertir un array
 Ejemplo:
-  [1,2,3,4] debería quedar como [4,3,2,1]
-  [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
-  [5,6,3] debería quedar como [3,6,5]
-
+[1,2,3,4] debería quedar como [4,3,2,1]
+[6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
+[5,6,3] debería quedar como [3,6,5]
+*/
+function invertirArrayIterando(arr){
+    let nuevoArray = [];
+    for(let i = arr.length -1; i >= 0; i--){
+        nuevoArray.push(arr[i]);
+    }
+    return nuevoArray;
+}
+console.log(invertirArrayIterando([1,2,3,4,5,6,7,8,9]));
+/*
 Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
   "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
