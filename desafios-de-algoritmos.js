@@ -7,131 +7,415 @@ usando  elementos de programación simples y clásicos.
 
 /*
 Desafío de programación #1: Imprimí los números del 1 al 10
-
- Resultado: 10 9 8 7 6 5 4 3 2 1
-
- Desafìo de programación  #2: Imprimí los números impares del 1 al 100
-
- 1 3 5 ... 99
-
+Resultado: 10 9 8 7 6 5 4 3 2 1
+*/
+for(let i = 10; i > 0; i--){
+    console.log(i);
+}
+/*
+Desafìo de programación  #2: Imprimí los números impares del 1 al 100
+1 3 5 ... 99
+*/
+for(let i = 1; i <= 100; i+=2){
+    console.log(i)
+}
+/*
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
-
- 7x0 = 0
- 7x1 = 7
- ...
- 7x9 = 63
-
+7x0 = 0
+7x1 = 7
+...
+7x9 = 63
+*/
+for(let i = 1; i <= 10; i++){
+    let tablaDelSiete = "7 x " + i + " = " + 7 * i;
+    console.log(tablaDelSiete)
+}
+/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
+1x0 = 0
+...
+1x9 = 9
+2x0 = 0
+...
+2x9 = 18
+...
+...
+9x9 = 81
+*/
+for(let i = 1; i <= 10; i++){
+    console.log("")
+    console.log("tabla del " + i)
+    for(let j = 1; j <= 10; j++){
+        console.log(i + " x " + j + " = " + j * i)
+        
+    }
+}
 
- 1x0 = 0
- ...
- 1x9 = 9
- 2x0 = 0
- ...
- 2x9 = 18
- ...
- ...
- 9x9 = 81
-
+function imprimirLaTablaDel(numero, hasta){
+    for(let i = 1; i <= hasta; i++){
+        console.log(numero + " x " + i + " = " + numero * i);
+    }
+    return;
+}
+console.log(imprimirLaTablaDel(28,30));
+/*
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
- [1,2,3,4,5,6,7,8,9,10]
-
- 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
-
+[1,2,3,4,5,6,7,8,9,10]
+1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+*/
+function calcularLaSumaDeNumeros(arrayDeNumeros){
+    let total = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        total += arrayDeNumeros[i];
+    }
+    return total;
+}
+console.log(calcularLaSumaDeNumeros([1,2,3,4,5,6,7,8,9,10]));
+/*
 Desafío de programación #6: Calcula 10! (10 factorial)
+10 * 9 * 8 * ... * 1
+*/
+function calcularFactorial(numero){
+    let total = 1;
+    for(let i = 1; i <= numero; i++){
+        total *= i;
+    }
+    return total;
+}
+console.log(calcularFactorial(10));
 
- 10 * 9 * 8 * ... * 1
+//Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+let suma = 0;
+for(let i = 11; i <= 30; i+=2){
+    suma += i;
+}
+console.log(suma);
 
-Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+//Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+function celsiusAFahrenheit(numeroCelsius){
+    return numeroCelsius * 1.8 + 32;    
+}
+console.log(celsiusAFahrenheit(33));
 
-Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+//Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+function fahrenheitACelsius(numeroFahrenheit){
+    return (numeroFahrenheit - 32) / 1.8;
+}
+console.log(fahrenheitACelsius(131));
 
-Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+//Desafío de programación #10: Calcula la suma de todos los números en un array de números
+console.log((calcularLaSumaDeNumeros([44,23,7,5,81,67,3,18])));
 
-Desafío de programación #10: Calcula la suma de todos los números en un array de números
+//Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+function calcularElPromedio(arrayDeNumeros){
+    let total = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        total += arrayDeNumeros[i];
+    }
+    return total / arrayDeNumeros.length;
+}
+console.log(calcularElPromedio([1,2,3,4,5,6]));
 
-Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+function devolverNumerosPositivos(arrayDeNumeros){
+    let numeroPositivo = [];
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        if(arrayDeNumeros[i] > 0){
+            numeroPositivo.push(arrayDeNumeros[i]);
+        }
+    }
+    return numeroPositivo;
+}
+console.log(devolverNumerosPositivos([2,5,-6,8,-1,9,-45,0,2]));
 
-Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+//Desafío de programación #13: Find the maximum number in an array of numbers
+function devolverElMayorNumero(arrayDeNumeros){
+    let contador = 0;
+    for(let i = 0; i < arrayDeNumeros.length; i++){
+        if(arrayDeNumeros[i] > contador){
+            contador = arrayDeNumeros[i];
+        }
+    }
+    return contador;
+}
+console.log(devolverElMayorNumero([2, 5, -6, 8, -1, 9, -45, 0, 2]));
 
-Desafío de programación #13: Find the maximum number in an array of numbers
-
+/*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
-
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+*/
+function imprimirDigitosFibonacci(numero){
+    let fibonacci = [0,1]; 
+    for(let i = 0; i < numero -2; i++){ 
+        fibonacci.push(fibonacci[i] + fibonacci[i +1]); 
+    }
+    return fibonacci;
+}
+console.log(imprimirDigitosFibonacci(10));
 
-Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+// opcion 2 encuentra el numero N de fibonacci
+function imprimirNumeroFibonacci(numero){
+    let fibonacci = [0,1]; 
+    for(let i = 0; i < numero -2; i++){ 
+        fibonacci.push(fibonacci[i] + fibonacci[i +1]); 
+    }
+    return fibonacci[fibonacci.length -1];
+}
+console.log(imprimirNumeroFibonacci(20));
 
-Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
-Aclaración: Los números primos son aquellos que tienen exactamente 4 divisores enteros.
-Ejemplo:
-   1 NO es primo porque tiene 2 divisores enteros (1, -1)
-   2 es primo porque sólo puede dividirse por (1,-1,2,-2)
-   3 es primo porque sólo puede dividirse por (1,-1,3,-3)
-   4 NO es primo porque se puede dividir por (1,-1,2,-2,4,-4)
-   5 es primo porque sólo puede dividirse por (1,-1,5,-5)
-   6 NO es primo porque se puede dividir por (1,-1,2,-2,3,-3,6,-6)
-   ... y así
+//Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+function fibonacciRecursivo(numero){
+    if(numero == 0) { return 0 }
+    if(numero == 1) { return 1 }
+    return fibonacciRecursivo(numero -1) + fibonacciRecursivo(numero -2);
+}
 
+//Desafío de programación #16: Create una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+function esNumeroPrimo(numero){ 
+    let contador = 0; 
+    for(let i = 1; i <= numero; i++){
+        if(numero % i === 0){ 
+            contador++ 
+        }    
+    }
+    if(contador === 2 ){
+        numero = true
+    }else{
+        numero = false;
+    }
+    return numero;
+}
+console.log(esNumeroPrimo(9));
 
+/*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
-   123 = 1 + 2 + 3 = 6
-   2 = 2
-   1234 = 1 + 2 + 3 + 4 = 10
+123 = 1 + 2 + 3 = 6
+2 = 2
+1234 = 1 + 2 + 3 + 4 = 10
+*/
+function sumarTodosLosNumeros(numero){
+    let array = numero.toString();
+    let contador = [];
+    let total = 0;
+    
+    for(let i = 0; i < array.length; i++) {
+        contador.push(array[i]);
+        total += Number(array[i]);
+    }
+    return total;
+}
+console.log(sumarTodosLosNumeros(57483647));
 
-Desafío de programación #18: Imprimir los primeros 100 números primos
-
+//Desafío de programación #18: Imprimir los primeros 100 números primos
+function imprimirNumerosPrimos(numero){ //<-indicar cantidad de n-primos deseados
+    let numerosPrimos = [];
+    for (let i = numerosPrimos; numerosPrimos.length < numero; i++) {
+        if(esNumeroPrimo(i)){ //<-llamo a la funcion para preguntar si es primo
+            numerosPrimos.push(i);
+        }
+    }
+    return numerosPrimos;
+}
+console.log(imprimirNumerosPrimos(100));
+/*
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
-  Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
-
+Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
+*/
+function obtenerPrimosMayoresQue(numero, cantidad) { //<-indicar en "cantidad" de n-primos deseados mayores que "numero"
+    let numerosPrimos = [];
+    for(let i = numero + 1; numerosPrimos.length < cantidad; i++){
+        if(esNumeroPrimo(i)){
+            numerosPrimos.push(i);
+        }
+    }
+    return numerosPrimos;
+}
+console.log(obtenerPrimosMayoresQue(50,36));
+/*
 Desafío de programación #20: Rotar un array hacia la izquierda una posición
 Ejemplo:
-  [9,1,2,3,4] debería quedar como [1,2,3,4,9]
-  [5] debería quedar como [5]
-  [4,3,2,1] debería quedar como [3,2,1,4]
+[9,1,2,3,4] debería quedar como [1,2,3,4,9]
+[5] debería quedar como [5]
+[4,3,2,1] debería quedar como [3,2,1,4]
+*/
+function rotarHaciaLaIzquierda(array){
+    let primeraPosicion = array.shift();
+    array.push(primeraPosicion);
+    return array;
+}
+console.log(rotarHaciaLaIzquierda([9, 1, 2, 3, 4, 5, 6, 7, 8]));
 
+/*
 Desafío de programación #21: Rotar un array a la derecha una posición
 Ejemplo:
-  [2,3,4,1] debería quedar como [1,2,3,4]
-  [2,3] debería quedar como [3,2]
+[2,3,4,1] debería quedar como [1,2,3,4]
+[2,3] debería quedar como [3,2]
+*/
+function rotarHaciaLaDerecha(array){
+    let ultimaPosicion = array.pop();
+    array.unshift(ultimaPosicion);
+    return array;
+}
+console.log(rotarHaciaLaDerecha([2, 3, 4, 5, 6, 7, 8, 9, 1]));
 
+/*
 Desafío de programación #22: Invertir un array
 Ejemplo:
-  [1,2,3,4] debería quedar como [4,3,2,1]
-  [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
-  [5,6,3] debería quedar como [3,6,5]
+[1,2,3,4] debería quedar como [4,3,2,1]
+[6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
+[5,6,3] debería quedar como [3,6,5]
+*/
+function invertirArrayIterando(arr){
+    let nuevoArray = [];
+    for(let i = arr.length -1; i >= 0; i--){
+        nuevoArray.push(arr[i]);
+    }
+    return nuevoArray;
+}
+console.log(invertirArrayIterando([1,2,3,4,5,6,7,8,9]));
 
+// utilizando el metodo .reverse()
+let arrayDeNumeros = [1,2,3,4,5,6,7];
+console.log(arrayDeNumeros.reverse());
+
+/*
 Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
-  "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
-  "bienvenido" debería quedar como "odinevneib"
+"dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
+"bienvenido" debería quedar como "odinevneib"
+*/
+function invertirCadenaDeCaracteresIterando(cadena){
+    let pushLetra = "";
+    for(let i = cadena.length - 1; i >= 0; i--){
+        pushLetra += cadena[i];
+    }
+    return pushLetra;
+}
+console.log(invertirCadenaDeCaracteresIterando("odinevneib"));
 
+// mejor opcion, utilizando metodos
+function invertirCadenaDeCaracteres(cadena){
+    return cadena.split("").reverse().join("");
+}
+console.log(invertirCadenaDeCaracteres("odinevneib"));
+
+/*
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
-  [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+[1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+*/
+function concatenarArrayIterando(arr1, arr2){
+    let nuevoArray = arr1;
+    for(let i = 0; i < arr2.length; i++){
+        nuevoArray.push(arr2[i]);
+    }
+    return nuevoArray;
+}
+console.log(concatenarArrayIterando([1,2,3], ["a","b","c"]));
 
+// segunda opcion con el metodo .concat()
+function concatenarArray(arr1, arr2){
+    let nuevoArray = arr1.concat(arr2);
+    return nuevoArray;
+}
+console.log(concatenarArray([1,2,3], ["a","b","c"]));
 
+/*
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Nota: Esto se llama "diferencia simétrica" entre conjuntos
-
-Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Ejemplo:
-  [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
-  [5,10,3] y [10,1] debería quedar como [5,3,1]
+[1,2,3] y [3,7,11] debería devolver [1,2,7,11]
+[5,10,3] y [10,1] debería quedar como [5,3,1]
+*/
+function diferenciaSimetricaIterando(arr1, arr2){
+    let resultado = [];
+    let diferente = false;
+    for(let i = 0; i < arr1.length; i++){
+        for(let j = 0; j < arr2.length; j++){
+            if(arr1[i] !== arr2[j]){
+                diferente = true;
+            } else {
+                diferente = false;
+                break;
+            }
+        }
+        if(diferente === true){
+            resultado.push(arr1[i]);
+        }
+    }   
 
+    for(let i = 0; i < arr2.length; i++){
+        for(let j = 0; j < arr1.length; j++){
+            if(arr2[i] !== arr1[j]){
+                diferente = true;
+            } else {
+                diferente = false;
+                break;
+            }
+        }
+        if(diferente === true){
+            resultado.push(arr2[i]);
+        }
+    }   
+
+    return resultado;
+}
+console.log(diferenciaSimetricaIterando([1,2,3],[3,2,11]));
+
+// segunda opcion con el metodo .indexOf()
+function diferenciaSimetrica(arr1, arr2){
+    let resultado = [];
+    for(let i = 0; i < arr1.length; i++){
+        if(arr2.indexOf(arr1[i]) === -1){
+            resultado.push(arr1[i]);
+        }
+    }
+    for(let j = 0; j < arr2.length; j++){
+        if(arr1.indexOf(arr2[j]) === -1){
+            resultado.push(arr2[j]);
+        }
+    }
+    return resultado;
+}
+console.log(diferenciaSimetrica([1,2,3],[3,7,11]));
+
+/*
 Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
 Ejemplo:
-  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+[5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+*/
+function restaEntreConjuntos(arr1, arr2){
+    let resultado = [];
+    for(let i = 0; i < arr1.length; i++){
+        if(arr2.indexOf(arr1[i]) === -1){
+            resultado.push(arr1[i]);
+        }
+    }
+    return resultado;
+}
+console.log(restaEntreConjuntos([5,1,2,3,4], [3,4]));
 
+/*
 Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 Ejemplo:
-   [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
+[1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
+*/
+function eliminarNumerosDuplicados(arr){
+    let resultado = [];
+    for(let i = 0; i < arr.length; i++){
+        if(!resultado.includes(arr[i])){
+            resultado.push(arr[i]);
+        }
+    }
+    return resultado;
+}
+console.log(eliminarNumerosDuplicados([1,2,3,4,5,4,3,2,1,0]));
 
-
+/*
 ==== FALTAN TRADUCIR
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
 Desafío de programación #29: Print the distance between the first 100 prime numbers
